@@ -1,8 +1,17 @@
 {
   "name": "nlw-esports-mobile",
   "version": "1.0.0",
+  "description": "Next Level Week app ESports theme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dimas-prates/nlw-esports-frontend.git"
+  },
+  "private": true,
+  "author": "Dimas Prates",
+  "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "lint:fix": "eslint --fix ",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -18,9 +27,60 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@commitlint/cli": "^17.1.2",
+    "@types/node": "^18.7.18",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.69.1",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "commitizen": "^4.2.5",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.23.1",
+    "eslint-plugin-react": "^7.31.8",
+    "husky": "^8.0.1",
     "typescript": "~4.3.5"
   },
-  "private": true
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        ":sparkles: feat": {
+          "description": "A new feature",
+          "title": "Features"
+        },
+        ":adhesive_bandage: fix": {
+          "description": "A bug fix"
+        },
+        ":memo: doc": {
+          "description": "Documentation only changes"
+        },
+        ":pencil2: style": {
+          "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"
+        },
+        ":recycle: refactor": {
+          "description": "A code change that neither fixes a bug nor adds a feature"
+        },
+        ":zap: perf": {
+          "description": "A code change that improves performance"
+        },
+        ":test_tube: test": {
+          "description": "Adding missing tests or correcting existing tests"
+        },
+        ":package: build": {
+          "description": "Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)"
+        },
+        ":bricks: ci": {
+          "description": "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)"
+        },
+        ":wrench: chore": {
+          "description": "Other changes that don't modify src or test files"
+        },
+        ":rewind: revert": {
+          "description": "Reverts a previous commit",
+          "prefix": "tsdts"
+        }
+      }
+    }
+  }
 }
