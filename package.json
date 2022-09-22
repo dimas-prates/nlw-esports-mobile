@@ -11,7 +11,7 @@
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "lint:fix": "eslint --fix ",
+    "lint:fix": "eslint --fix ./src/",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
