@@ -26,6 +26,7 @@ export function Home() {
       <SafeAreaView style={styles.container}>
         <Image source={logoImage} style={styles.logo} />
         <Heading title="Find your duo!" subtitle="Select the game you want to play" />
+
         <FlatList data={games} keyExtractor={item => item.id} renderItem={({ item }) => (
           <GameCard data={item} onPress={() => handleOpenGame(item)} />
         )} horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.contentList} />
