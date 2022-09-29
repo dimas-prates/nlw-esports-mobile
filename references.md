@@ -5,3 +5,5 @@
 * [File watchers reached (error fix)](https://stackoverflow.com/questions/55763428/react-native-error-enospc-system-limit-for-number-of-file-watchers-reached)
 * [React Navigation + dependencies](https://reactnavigation.org/docs/getting-started#installation)
 * [Vector Icons](https://oblador.github.io/react-native-vector-icons/)
+* [Phosphor Icons](https://github.com/duongdev/phosphor-react-native)
+* [Expo SVG](https://docs.expo.dev/versions/latest/sdk/svg/)
