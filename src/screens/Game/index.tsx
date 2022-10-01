@@ -10,13 +10,17 @@ import logoImg from "../../assets/logo-nlw-esports.png";
 import { Heading } from "../../components/Heading";
 import { DuoCard, DuoCardProps } from "../../components/DuoCard";
 import { useEffect, useState } from "react";
+import { DuoMatch } from "../../components/DuoMatch";
+import { DiscordLogo } from "phosphor-react-native";
 
 export function Game() {
 
   const route = useRoute();
   const game = route.params as GameParams;
   const navigation = useNavigation();
+
   const [duos, setDuos] = useState<DuoCardProps[]>([]);
+  const [discordDuoSelected, setDiscordDuoSelected] = useState("juninho#1234");
 
   function handleGoBack() {
     navigation.goBack();
@@ -57,6 +61,10 @@ export function Game() {
             </Text>
           )} />
 
+        <DuoMatch visible={discordDuoSelected.length > 0}
+          discord="juninho#1234"
+          onClose={() => setDiscordDuoSelected("")}
+        />
       </SafeAreaView>
     </Background>
   );
