@@ -7,3 +7,4 @@
 * [Vector Icons](https://oblador.github.io/react-native-vector-icons/)
 * [Phosphor Icons](https://github.com/duongdev/phosphor-react-native)
 * [Expo SVG](https://docs.expo.dev/versions/latest/sdk/svg/)
+* [Expo Clipboard](https://docs.expo.dev/versions/latest/sdk/clipboard/#installation)
