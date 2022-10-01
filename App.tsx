@@ -7,7 +7,7 @@ import {
 } from "@expo-google-fonts/inter";
 import { Routes } from "./src/routes";
 import { Loading } from "./src/components/Loading";
-import "./src/services/notificationConfigs";
+import "./src/services/notificationConfig";
 import { getPushNotificationToken } from "./src/services/getPushNotificationToken";
 import {useRef, useEffect} from "react";
 import {Subscription} from "expo-modules-core";
