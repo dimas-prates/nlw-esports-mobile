@@ -4,7 +4,7 @@
   "description": "Next Level Week app ESports theme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dimas-prates/nlw-esports-frontend.git"
+    "url": "git@github.com:dimas-prates/nlw-esports-mobile.git"
   },
   "private": true,
   "author": "Dimas Prates",
