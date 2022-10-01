@@ -10,16 +10,25 @@ import logoImg from "../../assets/logo-nlw-esports.png";
 import { Heading } from "../../components/Heading";
 import { DuoCard, DuoCardProps } from "../../components/DuoCard";
 import { useEffect, useState } from "react";
+import { DuoMatch } from "../../components/DuoMatch";
 
 export function Game() {
 
   const route = useRoute();
   const game = route.params as GameParams;
   const navigation = useNavigation();
+
   const [duos, setDuos] = useState<DuoCardProps[]>([]);
+  const [discordDuoSelected, setDiscordDuoSelected] = useState("");
 
   function handleGoBack() {
     navigation.goBack();
+  }
+
+  async function getDiscordUse(adsId: string) {
+    await fetch(`http://192.168.15.26:3333/ads/${adsId}/discord`)
+      .then(response => response.json())
+      .then(data => setDiscordDuoSelected(data.discord));
   }
 
   useEffect(() => {
@@ -44,8 +53,7 @@ export function Game() {
         <Heading title={game.title} subtitle="Log in and start playing!" />
         <FlatList data={duos}
           keyExtractor={item => item.id}
-          // eslint-disable-next-line @typescript-eslint/no-empty-function
-          renderItem={({ item }) => (<DuoCard data={item} onConnect={() => { }} />)}
+          renderItem={({ item }) => (<DuoCard data={item} onConnect={() => {getDiscordUse(item.id);}} />)}
           style={styles.containerList}
           horizontal
           contentContainerStyle={[duos.length > 0 ? styles.contentList : styles.emptyListContent]}
@@ -57,6 +65,10 @@ export function Game() {
             </Text>
           )} />
 
+        <DuoMatch visible={discordDuoSelected.length > 0}
+          discord={discordDuoSelected}
+          onClose={() => setDiscordDuoSelected("")}
+        />
       </SafeAreaView>
     </Background>
   );

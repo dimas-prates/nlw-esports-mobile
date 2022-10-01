@@ -7,3 +7,9 @@
 * [Vector Icons](https://oblador.github.io/react-native-vector-icons/)
 * [Phosphor Icons](https://github.com/duongdev/phosphor-react-native)
 * [Expo SVG](https://docs.expo.dev/versions/latest/sdk/svg/)
+* [Expo Clipboard](https://docs.expo.dev/versions/latest/sdk/clipboard/#installation)
+* [Expo Notifications (push)](https://docs.expo.dev/versions/latest/sdk/notifications/#installation)
+  * To use it, you need to be logged in with a expo account ([create](https://expo.dev/signup))
+  * type in the terminal: ```yarn expo login```
+  * [Tool](https://expo.dev/notifications) to test it
+  * [Using an API](https://docs.expo.dev/push-notifications/sending-notifications/#http2-api) to do it
